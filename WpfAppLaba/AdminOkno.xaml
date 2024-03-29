@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfAppLaba.AdminOkno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppLaba"
+        mc:Ignorable="d"
+        Title="AdminOkno" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="SteelBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="RoleKnopka" Background="Green" Grid.Column="0" Content="Роли" Click="RoleKnopka_Click"/>
+            <Button x:Name="EmployerKnopka" Background="Green" Grid.Column="1" Content="Сотрудники" Click="Employerknopka_Click"/>
+            <Button x:Name="avtorizationKnopka" Background="Green" Grid.Column="2" Content="Авторизация" Click="avtorizationKnopka_Click"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="449*"/>
+                <ColumnDefinition Width="351*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Background="DarkCyan" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="58*"/>
+                    <RowDefinition Height="27*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="139*"/>
+                    <RowDefinition Height="55*"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="NameTbx" Background="DarkGray" Foreground="White" Grid.Row="1" PreviewTextInput="NameTbx_PreviewTextInput"/>
+                <TextBox x:Name="NameTbx1" Background="Gray" Foreground="White" Grid.Row="2" PreviewTextInput="NameTbx1_PreviewTextInput"/>
+                <TextBox x:Name="NameTbx2" Background="DimGray" Foreground="White" Grid.Row="3" PreviewTextInput="NameTbx2_PreviewTextInput"/>
+                <TextBox x:Name="NameTbx3" Background="DarkSlateGray" Foreground="White" Grid.Row="4"/>
+                <TextBox x:Name="NameTbxID" Background="DarkSlateGray" Foreground="White" Grid.Row="5"/>
+                <PasswordBox x:Name="NameTbxgg" Background="DarkSlateGray" Foreground="White" Grid.Row="5"/>
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="AddButton" Background="Green" Content="Изменить" Click="AddButton_Click" Grid.Column="0"/>
+                    <Button x:Name="SaveChangesButton" Background="Green" Content="Добавить" Click="SaveChangesButton_Click" Grid.Column="1"/>
+                    <Button x:Name="DeleteDataButton" Background="Green" Content="Удалить" Click="DeleteDataButton_Click" Grid.Column="2"/>
+                </Grid>
+                <Label HorizontalAlignment="Center" Width="200" Content="        Данные для заполнения" Height="38" VerticalAlignment="Top" Margin="0,2,0,0"/>
+            </Grid>
+            <DataGrid x:Name="DataGridDS" Grid.Row="1" Grid.Column="0" SelectionChanged="DataGridDS_SelectionChanged"></DataGrid>
+        </Grid>
+    </Grid>
+</Window>
